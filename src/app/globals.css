@@ -5,3 +5,7 @@
 * {
   outline: 0.1px solid orange;
 }
+
+body {
+  @apply bg-neutral-900;
+}
