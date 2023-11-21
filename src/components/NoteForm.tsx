@@ -56,14 +56,15 @@ export default function NoteForm() {
       ></textarea>
       <div className="flex justify-end gap-x-2">
         <button
-          className="px-5 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md"
+          className="px-5 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
           type="submit"
+          disabled={!title || !content}
         >
           {selectedNote ? "Update" : "Create"}
         </button>
         {selectedNote && (
           <button
-            className="px-5 py-2 text-white bg-slate-600 hover:bg-slate-700 rounded-md"
+            className="px-5 py-2 text-white bg-slate-600 hover:bg-slate-700 rounded-md "
             type="button"
             onClick={() => {
               setSelectedNote(null);
